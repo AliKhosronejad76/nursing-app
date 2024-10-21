@@ -1,5 +1,5 @@
 "use client";
-import { useDrawer } from "@/context/DrawerContentProvider";
+import { useDrawer } from "@/context/DrawerContextProvider";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Logo from "./Logo";
 import { IoIosSearch } from "react-icons/io";
@@ -33,7 +33,7 @@ export default function Header(){
 function DrawerButton(){
     const  { drawer , setDrawer } = useDrawer(); 
     return(
-        <button onClick={()=>setDrawer(true)}  className="flex text-2xl p-2.5 items-center justify-center rounded-full border border-gray-300">
+        <button onClick={()=>setDrawer(true)} className="lg:hidden flex text-2xl p-2.5 items-center justify-center rounded-full border border-gray-300">
             <GiHamburgerMenu />
         </button>
     );

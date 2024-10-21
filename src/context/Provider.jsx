@@ -1,11 +1,8 @@
-import DrawerContextProvider from "./DrawerContentProvider"
-
+import DrawerContextProvider from "./DrawerContextProvider"
 export default function Provider({children}){
     return(
-        <>
-            <DrawerContextProvider>
-                {children}
-            </DrawerContextProvider>
-        </>
+        <DrawerContextProvider>     
+            {children}
+        </DrawerContextProvider>
     )
 }
