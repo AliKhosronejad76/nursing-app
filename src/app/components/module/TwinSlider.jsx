@@ -15,7 +15,10 @@ import 'swiper/css/scrollbar';
 
 
 export default function TwinSlider({data}){
-    const [screen  , setScreen] = useState(window?.screen.width)
+    if(typeof window !== "undefined"){
+        const [screen  , setScreen] = useState(window.screen.width);
+        
+    }
 
     console.log(`!screen ==== ${screen}`)
     useEffect(()=>{
