@@ -25,7 +25,7 @@ export default function Item({data}){
                     <ul className={`p-4 ${open?"max-h-max overflow-visible block":"max-h-[0px] overflow-hidden hidden "} transition-[max-height,overflow,display] [transition:max-height_700ms,overflow_600ms_display_700ms] `} >
                             {
                                 data.subMenu.map((item,index)=>{return(
-                                    <li className="h-[55px]">
+                                    <li key={index} className="h-[55px]">
                                         <Link href="#" >
                                             {item.name}
                                         </Link>

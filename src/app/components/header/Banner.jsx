@@ -21,7 +21,7 @@ function BannerContent(){
 
 
     return(
-        <div className=" h-full lg:w-[50%] left-[0px] top-[150px] lg:absolute mb-12 lg:mb-0 px-5 lg:px-0 z-20 flex flex-col text-white">
+        <div className="min-h-full lg:w-[50%] left-[0px] top-[150px] lg:absolute mb-12 lg:mb-0 px-5 lg:px-0 z-20 flex flex-col text-white">
             <motion.h1 
              ref={ref2}
              initial={{x:"-200px" , opacity:0}}
@@ -59,14 +59,15 @@ function BannerImage(){
                 src="/img/banner.webp"
                 width={500}
                 height={500}
-                className="w-[550px] a"
+                className="w-[550px] "
+                alt="hero"
             />
             <Image 
                 src="/img/banner-cover.webp"
                 width={500}
                 height={500}
                 className="w-[550px] absolute right-[-35px] top-[30px]"
-
+                alt="hero"
             />
         </motion.div>
     );

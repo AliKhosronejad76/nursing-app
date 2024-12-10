@@ -47,6 +47,7 @@ export default function ServicesTitle(){
                     height={600}
                     className="w-[770px]"
                     ref={ref2}
+                    alt="hero"
             
                 />
             </motion.div>

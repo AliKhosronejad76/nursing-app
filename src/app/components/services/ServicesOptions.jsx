@@ -55,6 +55,7 @@ function BigItem({img,href,title,inView,delay}){
                     width={500}
                     height={500}
                     className="w-full p-4"
+                    alt="option"
                 /> 
                 <h2 className={`pb-3 text-md text-center  ${hover ?'text-white transition duration-700':'text-gray-800 transition duration-700'} `}>{title}</h2>
             </Link>
@@ -79,6 +80,7 @@ function SmallItem({img,href,title,delay,inView}){
                     width={500}
                     height={500}
                     className="w-full"
+                    alt="option"
                 /> 
                 <h2 className={`pb-3 text-md text-center  ${hover ?'text-white':'text-gray-700'}`}>{title}</h2>
 

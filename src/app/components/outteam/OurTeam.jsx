@@ -13,7 +13,7 @@ export default function OurTeam(){
 
 
     return(
-        <section cclassName="px-4 my-11">
+        <section className="px-4 my-11">
             <div ref={ref1} className="flex flex-col sm:flex-row sm:flex-wrap  justify-between">
                 <motion.div 
                 initial={{x:"190px",opacity:0}}
@@ -39,6 +39,7 @@ export default function OurTeam(){
                         width={400}
                         height={200}
                         className="w-full"
+                        alt="alt"
                     />
 
                 </motion.div>
@@ -52,6 +53,8 @@ export default function OurTeam(){
                         width={200}
                         height={200}
                         className="w-full"
+                        alt="alt"
+
                     />
 
                 </motion.div>
@@ -70,6 +73,8 @@ export default function OurTeam(){
                         width={300}
                         height={300}
                         className="w-full"
+                        alt="alt"
+
 
                     />
                 </div>
@@ -79,6 +84,8 @@ export default function OurTeam(){
                         width={300}
                         height={300}
                         className="w-full"
+                        alt="alt"
+
 
                     />
                 </div>
@@ -88,6 +95,8 @@ export default function OurTeam(){
                         width={300}
                         height={300}
                         className="w-full"
+                        alt="alt"
+
 
                     />
                 </div>
@@ -97,6 +106,8 @@ export default function OurTeam(){
                         width={300}
                         height={300}
                         className="w-full"
+                        alt="alt"
+
                     />
                 </div>
             </motion.div>

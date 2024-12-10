@@ -54,6 +54,7 @@ export default function TwinSlider({data}){
                                 src="/img/doc-1.webp"
                                 width={100}
                                 height={100}
+                                alt="alt"
                                 className="w-full h-full object-cover"
                             />
                         </div>

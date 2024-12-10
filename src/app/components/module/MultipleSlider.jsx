@@ -31,12 +31,13 @@ export default function MultipleSlider({ data }){
             {
 
                    data.map((item,index)=>(
-                    <SwiperSlide >
+                    <SwiperSlide key={index}>
                         <div className="bg-red-200">
                             <Image 
                                 src={item.img}
                                 width={300}
                                 height={300}
+                                alt="slide"
                                 className="w-full h-full"
                             />
                         </div>

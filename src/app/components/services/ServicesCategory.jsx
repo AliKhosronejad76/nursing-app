@@ -55,6 +55,7 @@ function Item({ img , title , desc }){
                     width={200}
                     height={200}
                     className="rounded-full w-full"
+                    alt="alt"
                 />
             </div>
             <h1 className="text-3xl lg:text-xl border-b border-gray-800 py-3 text-center yekanbakhFat">

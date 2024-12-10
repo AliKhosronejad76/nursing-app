@@ -32,6 +32,7 @@ export default function Support(){
                     src="/img/phone.webp"
                     width={400}
                     height={400}
+                    alt="mobile-support"
                     className="h-[500px] w-[300px] lg:h-[400px] p-2"
                 />
             </motion.div>

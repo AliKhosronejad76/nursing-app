@@ -62,6 +62,7 @@ function BlogItem({img}){
                 src={img}
                 width={400}
                 height={400}
+                alt="alt"
                 className="rounded-2xl w-full h-full absolute object-cover z-20 top-0 right-0 left-0 bottom-0"
             />
 

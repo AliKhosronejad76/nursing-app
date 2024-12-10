@@ -24,6 +24,7 @@ export default function NursingServiceAbout(){
                     src="/img/nursing-banner.webp"
                     width={600}
                     height={600}
+                    alt="about"
                 />
             </motion.div>
 
