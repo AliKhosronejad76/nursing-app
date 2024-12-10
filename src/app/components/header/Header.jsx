@@ -36,7 +36,7 @@ export default function Header(){
 function DrawerButton(){
     const  { drawer , setDrawer } = useDrawer(); 
     return(
-        <button onClick={()=>setDrawer(true)} className="lg:hidden flex text-xl p-2 items-center justify-center rounded-full bg-white border border-gray-300">
+        <button onClick={()=>setDrawer(true)} className="lg:hidden flex text-xl p-2 items-center justify-center rounded-full bg-white border border-gray-300 outline">
             <GiHamburgerMenu />
         </button>
     );
