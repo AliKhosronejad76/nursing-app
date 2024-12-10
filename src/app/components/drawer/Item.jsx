@@ -12,11 +12,11 @@ export default function Item({data}){
             {
                 data.subMenu ? 
                 <>
-                    <button onClick={()=>setOpten(!open)} className="bg-white w-full h-[70px] flex items-center justify-between pr-4">
+                    <button onClick={()=>setOpten(!open)} className="bg-white w-full h-16 flex items-center justify-between pr-4 outline-none">
                         <Link href="#" className="w-[85%] text-start h-full flex items-center">
                             {data.name}
                         </Link>
-                        <div className="bg-gray-100 border-r border-gray-200 w-[15%] h-full flex items-center justify-center" >
+                        <div className="bg-gray-100 border-r border-gray-200 w-[20%] h-full flex items-center justify-center" >
                             <FaChevronDown 
                                 className={`${open?"rotate-180":""} transition duration-700 `}
                             />
