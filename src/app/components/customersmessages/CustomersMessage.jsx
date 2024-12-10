@@ -1,4 +1,7 @@
 "use client";
+
+import {motion} from "framer-motion";
+import {useInView} from "react-intersection-observer";
 import Title from "../title/Title";
 import TwinSlider from "../module/TwinSlider";
 
@@ -20,12 +23,22 @@ const data = [
 ]; 
 
 export default function CustomersMessage(){
+    const {ref , inView} = useInView();
+
     return(
-        <section className="my-10 px-4" >
+        <motion.section 
+            className="my-10 px-4"
+            ref={ref}
+            initial={{x:"-200px" , opacity:0}}
+            animate={ inView ? {x:0, opacity:1} : {}}
+            transition={{duration:.8 ,delay:.8}}
+            
+        
+        >
            <Title title={"پیام های مهرآمیز شما"}/>
            <div className="mt-8 pb-5 px-11">
             <TwinSlider data={data}/>
            </div>
-        </section>
+        </motion.section>
     );
 }

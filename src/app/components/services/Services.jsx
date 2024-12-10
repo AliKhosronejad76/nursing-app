@@ -1,4 +1,4 @@
-import ServicesDesc from "./servicesDesc";
+import ServicesDesc from "./ServicesDesc";
 import ServicesOptions from "./ServicesOptions";
 import NursingServiceAbout from "./NursingServiceAbout";
 import ServicesTitle from "./ServicesTitle";

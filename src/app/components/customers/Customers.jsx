@@ -1,5 +1,9 @@
+"use client";
+import {motion} from "framer-motion";
+import {useInView} from "react-intersection-observer";
 import Title from "../title/Title";
 import MultipleSlider from "../module/MultipleSlider";
+
 
 
 
@@ -15,10 +19,17 @@ const data = [
 ];
 
 export default function Customers(){
+    const {ref , inView} = useInView();
     return(
-        <section className="px-4 my-20">
+        <motion.section 
+            ref={ref}
+            initial={{x:"-400px" , opacity:0}}
+            animate={ inView ? {x:0, opacity:1} : {}}
+            transition={{duration:.8 ,delay:.8}}
+            className="px-4 my-20"
+        >
             <MultipleSlider data={data}/>
-        </section>
+        </motion.section>
     );
 }
 

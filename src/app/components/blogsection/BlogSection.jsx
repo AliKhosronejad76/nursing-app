@@ -1,33 +1,59 @@
+"use client";
+import { motion } from "framer-motion";
 import Title from "../title/Title";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 
 
 export default function BlogSection(){
+    const [ref1, inView1] = useInView({triggerOnce:true});
+    const [ref2, inView2] = useInView({triggerOnce:true});
+    const [ref3, inView3] = useInView({triggerOnce:true});
+
+    
     return(
         <section className="mt-9 pb-20" >
-            <div>
-                <h1 className="text-4xl text-center pb-11">
+            <div ref={ref1}>
+                <motion.h1 
+                  initial={{y:"20px" , opacity:0}}
+                  animate={inView1 ? {y:"0px",opacity:1}: {}}
+                  transition={{duration:0.4,delay:0.4}}
+                  className="text-4xl text-center pb-11"
+                 >
                     با ما
                     <span className="text-sky-700">
                         همراه باشید
                     </span>
-                </h1>
-
-            <Title title={"وبلاگ ثمین​"}/>
+                </motion.h1>
+            
+            <motion.div
+                 ref={ref2}
+                 initial={{y:"20px" , opacity:0}}
+                 animate={inView2 ? {y:"0px",opacity:1}: {}}
+                 transition={{duration:0.4,delay:0.4}}
+            >
+                <Title title={"وبلاگ ثمین​"}/>
+            </motion.div>
             </div>
-            <div className="my-8 px-5 flex justify-between">
+            <motion.div 
+              ref={ref3}
+              initial={{x:"-200px",opacity:0}}
+              animate={inView3 ?{x:"0px",opacity:1}:{}}
+              transition={{duration:0.4,delay:0.4}}
+              className=" w-full my-8 px-5 flex  flex-col sm:flex-row sm:flex-wrap justify-between"
+            >
                 <BlogItem img="/img/post-1.jpg" />
                 <BlogItem img="/img/post-2.jpg" />
                 <BlogItem img="/img/post-3.webp" />
 
-            </div>
+            </motion.div>
         </section>
     );
 }
 
 function BlogItem({img}){
     return(
-        <div className="w-[31%] h-[350px] rounded-xl relative ">
+        <div className="w-full sm:w-[48%] lg:w-[31%] h-[350px] rounded-xl relative mb-8 lg:mb-0">
             <div className="w-[65px] h-[65px] shadow-sm absolute top-[10px] right-[10px]  items-center  z-30 flex flex-col justify-center  bg-white rounded-xl shadow-sm text-lg">
                 <p>19</p>
                 <p>شهریور</p>

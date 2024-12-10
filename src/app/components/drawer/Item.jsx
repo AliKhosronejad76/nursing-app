@@ -8,7 +8,7 @@ import { FaChevronDown } from "react-icons/fa";
 export default function Item({data}){
     const [open,setOpten] = useState(false);
     return(
-        <li className="text-lg my-1 text-gray-700">
+        <li className=" my-1 text-gray-700">
             {
                 data.subMenu ? 
                 <>
@@ -22,7 +22,7 @@ export default function Item({data}){
                             />
                         </div>
                     </button>
-                    <ul className={`p-4 ${open?"max-h-max overflow-visible block":"max-h-[0px] overflow-hidden hidden "} transition-[max-height,overflow,display] [transition:max-height_700ms,overflow_600ms_display_700ms]`} >
+                    <ul className={`p-4 ${open?"max-h-max overflow-visible block":"max-h-[0px] overflow-hidden hidden "} transition-[max-height,overflow,display] [transition:max-height_700ms,overflow_600ms_display_700ms] `} >
                             {
                                 data.subMenu.map((item,index)=>{return(
                                     <li className="h-[55px]">
@@ -43,6 +43,6 @@ export default function Item({data}){
             }
            
           
-        </li>
+       </li>
     );
 }

@@ -37,7 +37,17 @@
     ;
 }
 
+@font-face {
+    font-family: yekanbakhLight;
+    src: url("./YekanBakh/YekanBakh-Light/YekanBakh-Light.eot") , 
+    url("./YekanBakh/YekanBakh-Light/YekanBakh-Light.ttf") , 
+    url("./YekanBakh/YekanBakh-Light/YekanBakh-Light.woff")
+    ;
+}
 
+.yekanbakhLight{
+    font-family: yekanbakhLight;
+}
 .yekanbakhReg{
     font-family: 'yekanbakhReg';
 }

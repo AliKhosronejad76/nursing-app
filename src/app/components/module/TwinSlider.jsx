@@ -1,5 +1,7 @@
-import Image from 'next/image';
+"use client";
 
+import Image from 'next/image';
+import { useState , useEffect } from "react";
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -13,12 +15,25 @@ import 'swiper/css/scrollbar';
 
 
 export default function TwinSlider({data}){
+    const [screen  , setScreen] = useState(window.screen.width)
+    console.log(`!screen ==== ${screen}`)
+    useEffect(()=>{
+        function updateScreen(){
+            setScreen(window.screen.width);
+            
+            
+        }
+
+        window.addEventListener('resize',updateScreen)
+        
+    },[])
+    
     return(
     <Swiper
-      className=" [&>.swiper-button-next]:hidden [&>.swiper-button-prev]:hidden"
+      className="[&>.swiper-button-next]:hidden [&>.swiper-button-prev]:hidden [&>.swiper-scrollbar]:hidden"
       modules={[Navigation,]}
       spaceBetween={50}
-      slidesPerView={2}
+      slidesPerView={screen <= 580 ? 1 : 2}
       navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}

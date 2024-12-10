@@ -17,7 +17,7 @@ import 'swiper/css/autoplay';
 export default function MultipleSlider({ data }){
     return(
         <Swiper
-            className=" [&>.swiper-button-next]:hidden [&>.swiper-button-prev]:hidden"
+            className=" [&>.swiper-button-next]:hidden [&>.swiper-button-prev]:hidden [&>.swiper-scrollbar]:hidden"
             modules={[Navigation]}
             
             spaceBetween={30}
