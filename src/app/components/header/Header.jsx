@@ -20,7 +20,7 @@ export default function Header(){
                    </div>
 
                 </div>
-                <div>
+                <div className="h-full flex items-center bg-white">
                     <button>
                      <IoIosSearch className="text-3xl" />
                     </button>
@@ -36,7 +36,7 @@ export default function Header(){
 function DrawerButton(){
     const  { drawer , setDrawer } = useDrawer(); 
     return(
-        <button onClick={()=>setDrawer(true)} className="lg:hidden flex text-2xl p-2.5 items-center justify-center rounded-full border border-gray-300">
+        <button onClick={()=>setDrawer(true)} className="lg:hidden flex text-xl p-2 items-center justify-center rounded-full bg-white border border-gray-300">
             <GiHamburgerMenu />
         </button>
     );
@@ -44,12 +44,12 @@ function DrawerButton(){
 
 function CardButton(){
     return(
-        <button className="relative w-max gap-2 px-2 py-2 flex justify-center items-center  rounded-full bg-[rgb(32,137,200)]">
-            <div className="bg-white rounded-full p-2">
-                <FiShoppingCart className="text-2xl" /> 
+        <button className="relative w-max gap-2 px-2 py-1.5  flex justify-center items-center  rounded-full bg-[rgb(32,137,200)]">
+            <div className="bg-white rounded-full p-1">
+                <FiShoppingCart className="text-xl" /> 
             </div>
             <span className="text-white mx-1 text-sm">0تومان</span>
-            <span className="w-[20px] h-[20px] text-sm shadow-xl bg-white flex items-ceneter justify-center rounded-full absolute top-[4px] left-[-1px] text-sky-800">0</span>
+            <div className="w-[20px] h-[20px] text-sm shadow-xl bg-white flex items-ceneter justify-center rounded-full absolute top-[-4px] left-[-1px] text-sky-800">0</div>
         </button>
     );
 }
