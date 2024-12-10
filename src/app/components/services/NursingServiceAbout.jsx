@@ -54,7 +54,7 @@ export default function NursingServiceAbout(){
             </motion.div>
             <div ref={ref1} className="w-full lg:w-[50%] flex justify-center mb-6 ">
                 <motion.button   
-                  className="yekanbakhLight py-3.5 px-5 rounded-3xl w-[50%] sm:w-[40%] lg:w-[50%] bg-sky-500 text-lg flex justify-between items-center text-white "
+                  className="yekanbakhLight py-3.5 px-5 rounded-3xl w-max sm:w-[40%] lg:w-[50%] gap-4 bg-sky-500 text-lg flex justify-between items-center text-white "
                   initial={{y:"30px", opacity:0}}
                   animate={inView1  ? {y:0,opacity:1}: {} }
                   transition={{duration:1.5 , delay:0.8}}

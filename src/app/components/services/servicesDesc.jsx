@@ -9,7 +9,7 @@ export default function ServicesDesc(){
    
     return(
         <div ref={ref} className="pb-40">
-            <div className="h-max mb-20 py-5  mt-12  flex flex-col  justify-start ">
+            <div className="h-max lg:mb-20 py-5  mt-12  flex flex-col  justify-start ">
                 <motion.h1
                    initial={{y:"20px",opacity:0}}
                    animate={inView ? {y:0,opacity:1}: {} }
