@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Banner(){
     
     return(
-        <div className="bg-sky-400 min-h-max  relative flex flex-col lg:flex-row lg:justify-center">
+        <div className=" bg-sky-400  h-full  lg:h-[700px]   flex flex-col lg:flex-row lg:justify-center">
            <BannerContent/>
            <BannerImage/>  
         </div>
@@ -20,7 +20,7 @@ function BannerContent(){
 
 
     return(
-        <div className="relative  lg:w-[50%] left-[0px] top-[80px] lg:top-[150px] lg:absolute mb-12 lg:mb-0 px-5 lg:px-0 z-20 flex flex-col text-white">
+        <div className="relative lg:absolute lg:w-[50%] left-[0px] top-[80px] lg:top-[150px]  mb-12 lg:mb-0 px-5 lg:px-0 z-20 flex flex-col text-white">
             <motion.h1 
              ref={ref2}
              initial={{x:"-200px" , opacity:0}}
