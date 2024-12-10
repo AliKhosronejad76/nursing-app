@@ -3,9 +3,10 @@ import Services from "./components/services/Services";
 import BlogSection from "./components/blogsection/BlogSection";
 import OurTeam from "./components/outteam/OurTeam";
 import Support from "./components/support/Support";
-import CustomersMessage from "./components/customersmessages/CustomersMessage";
 import Customers from "./components/customers/Customers";
-
+import dynamic from "next/dynamic";
+const DynamicCustomersMessage = dynamic(()=> import("./components/customersmessages/CustomersMessage"
+),{ssr:false});
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
       <BlogSection/>
       <OurTeam/>
       <Support/>
-      <CustomersMessage/>
+      <DynamicCustomersMessage/>
       <Customers/>
     </div>
   );
