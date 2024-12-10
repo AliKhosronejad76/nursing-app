@@ -21,7 +21,7 @@ export default function Header(){
 
                 </div>
                 <div className="h-full flex items-center bg-white">
-                    <button>
+                    <button className="bg-white">
                      <IoIosSearch className="text-3xl" />
                     </button>
                 </div>
