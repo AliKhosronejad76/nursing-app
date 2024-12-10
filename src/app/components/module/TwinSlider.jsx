@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import Image from 'next/image';
 import { useState , useEffect } from "react";
@@ -15,13 +15,12 @@ import 'swiper/css/scrollbar';
 
 
 export default function TwinSlider({data}){
-    const [screen  , setScreen] = useState(window.screen.width)
+    const [screen  , setScreen] = useState(window?.screen.width)
+
     console.log(`!screen ==== ${screen}`)
     useEffect(()=>{
         function updateScreen(){
-            setScreen(window.screen.width);
-            
-            
+            setScreen(window.screen.width);    
         }
 
         window.addEventListener('resize',updateScreen)
