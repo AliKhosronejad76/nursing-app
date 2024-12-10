@@ -8,7 +8,7 @@ import { FaChevronDown } from "react-icons/fa";
 export default function Item({data}){
     const [open,setOpten] = useState(false);
     return(
-        <li className=" my-1 text-gray-700">
+        <li className="bg-white my-1 text-gray-700">
             {
                 data.subMenu ? 
                 <>

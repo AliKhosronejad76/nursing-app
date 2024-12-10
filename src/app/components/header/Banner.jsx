@@ -7,10 +7,9 @@ import Image from "next/image";
 export default function Banner(){
     
     return(
-        <div className="bg-sky-400 h-[96vh] relative flex flex-col lg:flex-row lg:justify-center">
+        <div className="bg-sky-400 h-[65vh] relative flex flex-col lg:flex-row lg:justify-center">
            <BannerContent/>
-            <BannerImage/>
-           
+           <BannerImage/>  
         </div>
     );
 }
@@ -21,15 +20,15 @@ function BannerContent(){
 
 
     return(
-        <div className="min-h-full lg:w-[50%] left-[0px] top-[150px] lg:absolute mb-12 lg:mb-0 px-5 lg:px-0 z-20 flex flex-col text-white">
+        <div className="relative  lg:w-[50%] left-[0px] top-[80px] lg:top-[150px] lg:absolute mb-12 lg:mb-0 px-5 lg:px-0 z-20 flex flex-col text-white">
             <motion.h1 
              ref={ref2}
              initial={{x:"-200px" , opacity:0}}
              animate={inView2 ? {x:0 , opacity:1 }:{}}
              transition={{duration:1.5 , delay:0.8}}
-             className=" leading-relaxed flex flex-col yekanbakhFat">
-                <span className="text-7xl mb-7">ثمین</span>
-                <span className="mr-7 text-5xl leading-normal">مرکز خدمات برستاری در منزل</span>
+             className="leading-relaxed flex flex-col yekanbakhFat">
+                <span className="text-5xl lg:text-7xl mb-7">ثمین</span>
+                <span className="mr-7 text-3xl lg:text-5xl leading-normal">مرکز خدمات برستاری در منزل</span>
 
             </motion.h1>
 
@@ -54,7 +53,7 @@ function BannerImage(){
             initial={{opacity:0 , x:"300px"}}
             animate={inView ?{opacity:1 , x:'0px'} : {}}
             transition={{duration:1.5, delay:.8}}
-            className="z-10 lg:absolute lg:left-[430px] top-[60px]">
+            className="relative z-10 lg:absolute lg:left-[430px] top-[60px]">
             <Image 
                 src="/img/banner.webp"
                 width={500}
