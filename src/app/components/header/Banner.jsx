@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Banner(){
     
     return(
-        <div className="bg-sky-400 h-[65vh] relative flex flex-col lg:flex-row lg:justify-center">
+        <div className="bg-sky-400 min-h-max  relative flex flex-col lg:flex-row lg:justify-center">
            <BannerContent/>
            <BannerImage/>  
         </div>
@@ -58,7 +58,7 @@ function BannerImage(){
                 src="/img/banner.webp"
                 width={500}
                 height={500}
-                className="w-[550px] "
+                className="w-[330px] mx-auto lg:w-[550px] "
                 alt="hero"
             />
             <Image 

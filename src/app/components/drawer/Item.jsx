@@ -12,7 +12,7 @@ export default function Item({data}){
             {
                 data.subMenu ? 
                 <>
-                    <button onClick={()=>setOpten(!open)} className=" w-full h-[70px] flex items-center justify-between pr-4">
+                    <button onClick={()=>setOpten(!open)} className="bg-white w-full h-[70px] flex items-center justify-between pr-4">
                         <Link href="#" className="w-[85%] text-start h-full flex items-center">
                             {data.name}
                         </Link>
@@ -22,7 +22,7 @@ export default function Item({data}){
                             />
                         </div>
                     </button>
-                    <ul className={`p-4 ${open?"max-h-max overflow-visible block":"max-h-[0px] overflow-hidden hidden "} transition-[max-height,overflow,display] [transition:max-height_700ms,overflow_600ms_display_700ms] `} >
+                    <ul className={`bg-white p-4 ${open?"max-h-max overflow-visible block":"max-h-[0px] overflow-hidden hidden "} transition-[max-height,overflow,display] [transition:max-height_700ms,overflow_600ms_display_700ms] `} >
                             {
                                 data.subMenu.map((item,index)=>{return(
                                     <li key={index} className="h-[55px]">
