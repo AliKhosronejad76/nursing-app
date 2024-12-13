@@ -6,10 +6,10 @@ import Image from "next/image";
 
 export default function OurTeam(){
 
-    const [ref1 , inView1] = useInView();
-    const [ref2 , inView2] = useInView();
-    const [ref3 , inView3] = useInView();
-    const [ref4 , inView4] = useInView();
+    const [ref1 , inView1] = useInView({triggerOnce:true});
+    const [ref2 , inView2] = useInView({triggerOnce:true});
+    const [ref3 , inView3] = useInView({triggerOnce:true});
+    const [ref4 , inView4] = useInView({triggerOnce:true});
 
 
     return(
@@ -67,7 +67,7 @@ export default function OurTeam(){
              animate={inView2?{x:0}:{}}
              transition={{duration:"0.5",delay:'0.5'}}
              className="w-full  pt-20 flex flex-wrap justify-between gap-3 my-7">
-                <div className="w-[48%] lg:w-[23%]">
+                <div className="w-[47%] lg:w-[23%]">
                     <Image 
                         src="/img/doc-1.webp"
                         width={300}
@@ -78,7 +78,7 @@ export default function OurTeam(){
 
                     />
                 </div>
-                <div className="w-[48%] lg:w-[23%]">
+                <div className="w-[47%] lg:w-[23%]">
                     <Image 
                         src="/img/doc-3.webp"
                         width={300}
@@ -89,7 +89,7 @@ export default function OurTeam(){
 
                     />
                 </div>
-                <div className="w-[48%] lg:w-[23%]">
+                <div className="w-[47%] lg:w-[23%]">
                     <Image 
                         src="/img/doc4.webp"
                         width={300}
@@ -100,7 +100,7 @@ export default function OurTeam(){
 
                     />
                 </div>
-                <div className="w-[48%] lg:w-[23%]">
+                <div className="w-[47%] lg:w-[23%]">
                     <Image 
                         src="/img/doc-2.webp"
                         width={300}

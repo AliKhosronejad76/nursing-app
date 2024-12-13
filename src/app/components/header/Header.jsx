@@ -4,14 +4,13 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import Logo from "./Logo";
 import { IoIosSearch } from "react-icons/io";
 import { FiShoppingCart } from "react-icons/fi";
-import Banner from "./Banner";
 import Menu from "./menu/Menu";
-
+import { FaTimes } from "react-icons/fa";
 
 export default function Header(){
     return(
         <header className="relative ">
-            <nav className="mx-auto z-30 fixed top-[-10px] right-0 left-0   text-gray-700 mt-3 bg-white flex items-center rounded-full px-3 py-1 justify-between shadow-[0px_0px_7px_7px_rgba(0,0,0,0.2)]">
+            <nav className="mx-auto z-[300] fixed top-[-10px] right-0 left-0   text-gray-700 mt-3 bg-white flex items-center rounded-full px-3 py-1 justify-between shadow-[0px_0px_7px_7px_rgba(0,0,0,0.2)]">
                 <div className="flex items-center gap-4">
                    <DrawerButton/>
                    <Logo />
@@ -36,8 +35,8 @@ export default function Header(){
 function DrawerButton(){
     const  { drawer , setDrawer } = useDrawer(); 
     return(
-        <button onClick={()=>setDrawer(true)} className="lg:hidden flex text-xl p-2 items-center justify-center rounded-full bg-white border border-gray-300 outline-none">
-            <GiHamburgerMenu />
+        <button onClick={()=>setDrawer((prev)=>!prev)} className="lg:hidden flex text-xl p-2 items-center justify-center rounded-full bg-white border border-gray-300 outline-none">
+            {drawer ? <FaTimes/>:<GiHamburgerMenu />}
         </button>
     );
 } 
